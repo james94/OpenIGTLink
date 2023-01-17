@@ -9,6 +9,10 @@ IF(COMMAND cmake_policy)
 ENDIF(COMMAND cmake_policy)
 
 set (CMAKE_CXX_STANDARD 11)
+
+include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+conan_basic_setup(TARGETS)
+
 #-----------------------------------------------------------------------------
 # OpenIGTlink version number.
 SET(OpenIGTLink_VERSION_MAJOR "3")
